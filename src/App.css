@@ -203,3 +203,8 @@ footer a{color:var(--ac);text-decoration:none}
 .acct-wrap{display:flex;align-items:center;gap:8px}
 .btn-disconnect{background:none;border:1px solid var(--b2);border-radius:var(--rs);padding:7px 12px;font-size:12px;color:var(--t3);cursor:pointer;transition:all .15s}
 .btn-disconnect:hover{border-color:var(--rd);color:var(--rd)}
+
+/* Clean disconnect */
+.acct-wrap{display:flex;align-items:center;gap:6px}
+.btn-disconnect{background:var(--bg4);border:1px solid var(--b);border-radius:50%;width:34px;height:34px;font-size:14px;color:var(--t3);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;flex-shrink:0}
+.btn-disconnect:hover{border-color:var(--rd);color:var(--rd);background:rgba(239,68,68,.1)}
