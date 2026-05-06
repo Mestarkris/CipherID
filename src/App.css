@@ -198,3 +198,8 @@ footer a{color:var(--ac);text-decoration:none}
   .lb-hdr,.lb-row{grid-template-columns:1fr 1fr 1fr}
   .at-hdr,.at-row{grid-template-columns:1fr 1fr 1fr}
 }
+
+/* Disconnect */
+.acct-wrap{display:flex;align-items:center;gap:8px}
+.btn-disconnect{background:none;border:1px solid var(--b2);border-radius:var(--rs);padding:7px 12px;font-size:12px;color:var(--t3);cursor:pointer;transition:all .15s}
+.btn-disconnect:hover{border-color:var(--rd);color:var(--rd)}
