@@ -199,6 +199,8 @@ export default function App() {
           ):(
             <button className="btn-connect" onClick={connect}>Connect Wallet →</button>
           )}
+        </div>
+      </header>
 
       <div className="toasts">
         {toasts.map(t=>(
