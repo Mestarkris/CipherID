@@ -185,31 +185,21 @@ export default function App() {
             {stats.frozen && <span className="badge-frozen">❄ FROZEN</span>}
           </div>
           {account?(
-            <div className="acct-pill">
-              <span className="pulse"/>
-              <span className="acct-addr">{account.slice(0,6)}...{account.slice(-4)}</span>
-              <div className="acct-wrap">
-  <div className="acct-pill">
-    <span className="pulse"/>
-    <span className="acct-addr">{account.slice(0,6)}...{account.slice(-4)}</span>
-    {isOwner&&<span className="tag owner">Owner</span>}
-    {myStatus.has&&<span className="tag ver">✓ KYC</span>}
-    {myStatus.badgeValid&&<span className="tag badge-tag">⬟ #{myStatus.badgeId}</span>}
-  </div>
-  <button className="btn-disconnect" onClick={()=>{setAccount("");setContract(null);setIsOwner(false);setIsProvider(false);setTab("dashboard");}}>⏻</button>
-</div>
-  <button className="btn-disconnect" onClick={()=>{setAccount("");setContract(null);setIsOwner(false);setIsProvider(false);setTab("dashboard");}}>Disconnect</button>
-</div>
-              {isProvider&&<span className="tag prov">Provider</span>}
-              {myStatus.has&&<span className="tag ver">✓ KYC</span>}
-              {myStatus.frozen&&<span className="tag frozen">❄ Frozen</span>}
-              {myStatus.badgeValid&&<span className="tag badge-tag">⬟ #{myStatus.badgeId}</span>}
+          {account?(
+            <div className="acct-wrap">
+              <div className="acct-pill">
+                <span className="pulse"/>
+                <span className="acct-addr">{account.slice(0,6)}...{account.slice(-4)}</span>
+                {isOwner&&<span className="tag owner">Owner</span>}
+                {isProvider&&<span className="tag prov">Provider</span>}
+                {myStatus.has&&<span className="tag ver">✓ KYC</span>}
+                {myStatus.badgeValid&&<span className="tag badge-tag">⬟ #{myStatus.badgeId}</span>}
+              </div>
+              <button className="btn-disconnect" onClick={()=>{setAccount("");setContract(null);setIsOwner(false);setIsProvider(false);setTab("dashboard");}}>⏻</button>
             </div>
           ):(
             <button className="btn-connect" onClick={connect}>Connect Wallet →</button>
           )}
-        </div>
-      </header>
 
       <div className="toasts">
         {toasts.map(t=>(
