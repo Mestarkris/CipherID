@@ -185,6 +185,7 @@ export default function App() {
             {stats.frozen && <span className="badge-frozen">❄ FROZEN</span>}
           </div>
           {account?(
+          {account?(
             <div className="acct-wrap">
               <div className="acct-pill">
                 <span className="pulse"/>
